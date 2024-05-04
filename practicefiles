@@ -1,0 +1,24 @@
+import traceback
+with open ("pizza resturant","a+") as f:
+  try:
+      pizzas = int(input ("how many pizzas? > "))
+      size = int(input("size please "))
+      name = (input("your name "))
+      list_ = []
+      list2 = []
+      total = (pizzas * size)
+      list2.append(f"pizzas: {pizzas}. ")
+      list2.append(f"size: {size}. ")
+      list2.append(f"name: {name}. ")
+      list2.append(f"total amount:{total}$ thank you and enjoy adnan's pizza.")
+      list_.append(list2)
+      f.write("\n")
+      f.write(str(list_))
+  except ValueError as ve:
+      print("try again")
+   
+with open("pizza resturant", "r") as f:
+     contents = f.read()
+     print(contents)
+  
+
